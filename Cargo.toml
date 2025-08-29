@@ -1,0 +1,45 @@
+[package]
+name = "rs-arrow-json2schema"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[dependencies.arrow-schema]
+version = "56"
+default-features = false
+features = [
+	"serde",
+]
+
+[dependencies.arrow]
+version = "56"
+default-features = false
+features = [
+	"json",
+]
+
+[dependencies.serde]
+version = "1"
+default-features = false
+features = [
+	"std",
+	"derive",
+]
+
+[dependencies.serde_json]
+version = "1"
+default-features = false
+features = [
+	"std",
+]
+
+[dependencies.rs-arrow-merge-schema]
+version = "0"
+default-features = false
+features = [
+]
